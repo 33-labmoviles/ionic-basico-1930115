@@ -2,7 +2,6 @@
 
 <html lang="es">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -13,31 +12,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 
     <title>Practica 2</title>
-  
 </head>
 
 <body>
-<ion-app>
-    <h1>Ionic basico - practica 2</h1> 
-    <ion-grid>
-        <ion-row>   <!--Fila 1-->
-            <ion-col>
-               Fila 1 Columna 1
-            </ion-col>
-            <ion-col>
-               Fila 1 Columna 2
-            </ion-col>
-        </ion-row>
+    <ion-app>
+        <h1>Ionic basico - Práctica 2</h1> 
+        <ion-grid>
+            <ion-row>   <!--Fila 1-->
+                <ion-col size="4">
+                <ion-label>Descripción:</ion-label>
+                </ion-col>
+                <ion-col>
+                <ion-input placeholder="Ejemplo: Chilaquiles Habaneros" id="Descripción"></ion-input>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>   <!--Fila 2-->
-            <ion-col>
-                Fila 2 Columna 2
-            </ion-col>
-            <ion-col>
-                Fila 2 Columna 2
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-</ion-app> 
+            <ion-row>   <!--Fila 2-->
+                <ion-col size="4">
+                <ion-label>Monto:</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-input placeholder="Ejemplo: $80" id="monto" type="number"></ion-input>
+                </ion-col>
+            </ion-row>
 
+            <ion-row>   <!--Fila 3-->
+                <ion-col>
+                    <ion-button onclick="calcularTotal()">Calcular Monto</ion-button>
+                </ion-col>
+            </ion-row>
+
+            <p id="totalMsg">
+                Total:
+            </p>
+        
+        </ion-grid>
+    </ion-app> 
 </body>
+<script scr="index.js"></script>
+</html>
