@@ -8,13 +8,23 @@ var montoTxt = document.getElementById("monto");
 
 var totalMsg = document.getElementById("totalMsg");
 
+var descTxt = document.getElementById("descripcion");
+
+var descrip = document.getElementById("descrip");
+
+descAnt = "";
+
 function calcularTotal() {
     //obtener el monto del campo de texto
     monto = montoTxt.value;
     monto = parseInt(monto);
+    desc = descTxt.value;
 
     total = total + monto;
     
     //Imprimir en página
-    totalMsg.innerHTML = "Total: " + total;
+
+    descrip.innerHTML = descAnt + "\n" + desc + ": " + monto;
+    descAnt = desc + ": " + montoTxt.value;
+    totalMsg.innerHTML ="Total: " + total;
 }
